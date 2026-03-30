@@ -4,7 +4,7 @@
 [org 0x7C00]
 
 KERNEL_OFFSET equ 0x1000    ; Onde o kernel será carregado na memória
-KERNEL_SECTORS equ 10       ; Quantos setores ler (ajuste conforme seu kernel)
+KERNEL_SECTORS equ 50       ; Quantos setores ler (ajuste conforme seu kernel)
 
 start:
     cli

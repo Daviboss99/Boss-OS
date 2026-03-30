@@ -32,10 +32,17 @@ main_loop:
 
 %include "video.asm"      ; Funções de desenho e janelas
 %include "relogio.asm"    ; Lógica do relógio CMOS
+%include "memoria_grs.asm"
+%include "memoria_vga.asm"
 %include "biblioteca.asm"
 %include "terminal.asm"
 %include "editor.asm"
 %include "calc.asm"
+%include "moto_IA.asm"
+%include "rede_rtl8139.asm"
+%include "http_boss.asm"
+%include "web_parser.asm"
+%include "navegador.asm"
 %include "teclado.asm"
 ; Mensagens globais
 msg_erro db "Erro no modulo!", 0

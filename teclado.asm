@@ -19,25 +19,45 @@ verificar_teclado:
     cmp al, '3'          ; Tecla '3' para a Calculadora
     je .ir_calculadora
 
+    cmp al, '4'          ; Tecla '4' para a IA
+    je .ir_IA
+
+    cmp al, '5'          ; Tecla '5' para a memoria
+    je .ir_memoria
+
+    cmp al, '6'          ; Tecla '6' para o navegador
+    je .ir_web
+
     jmp .sem_tecla       ; Se não for nada, ignora
 
 ; --- DESTINOS (Estes podem ficar encostados na esquerda com ':') ---
 .abrir_menu:
     call desenhar_menu_iniciar
-    jmp .sem_tecla
+    ret
 
 .ir_terminal:
     call abrir_terminal_v2
-    jmp .sem_tecla
+    ret
 
 .ir_editor:
     call abrir_editor
-    jmp .sem_tecla
+    ret
 
 .ir_calculadora:
     call abrir_calculadora
-    jmp .sem_tecla
+    ret
+
+.ir_IA:
+    call abrir_IA
+    ret
+
+.ir_memoria:
+    call abrir_memoria
+    ret
+
+.ir_web:
+    call abrir_navegador
+    ret
 
 .sem_tecla:
     jmp verificar_teclado
-

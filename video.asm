@@ -54,15 +54,29 @@ desenhar_menu_iniciar:
     
     mov dh, 13
     mov dl, 2
-    mov si, txt_web
+    mov si, txt_edito
     call imprimir_texto_menu
     
     mov dh, 15
     mov dl, 2
     mov si, txt_calc
     call imprimir_texto_menu
+    
+    mov dh, 17
+    mov dl, 2
+    mov si, txt_IA
+    call imprimir_texto_menu
+    
+    mov dh, 19
+    mov dl, 2
+    mov si, txt_memoria
+    call imprimir_texto_menu
+    
+    mov dh, 21
+    mov dl, 2
+    mov si, txt_web
+    call imprimir_texto_menu
     ret
-
 ; --- 4. Função para Janelas de Aplicativos ---
 ; CH=Y, CL=X, DH=Alt, DL=Larg, SI=Titulo
 desenhar_janela_app:
@@ -115,6 +129,8 @@ resetar_cursor:
 ; --- TEXTOS ---
 txt_iniciar  db "[ Iniciar ]", 0
 txt_terminal db "1. Terminal", 0
-txt_web      db "2. Navegador", 0
+txt_edito    db "2. edito", 0
 txt_calc     db "3. Calculadora", 0
-
+txt_IA       db "4. BossIA", 0
+txt_memoria  db "5. memoria", 0
+txt_web      db "6. web", 0
